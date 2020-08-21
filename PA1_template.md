@@ -9,6 +9,9 @@ output:
 ## Loading and preprocessing the data
 
 
+```r
+knitr::opts_chunk$set(echo=TRUE)
+```
 
 
 
@@ -79,7 +82,7 @@ ggplot(activity_raw, aes(x=date,y=steps))+geom_col(fill="blue")+
 ## Warning: Removed 2304 rows containing missing values (position_stack).
 ```
 
-![plot of chunk histogram number of steps - mean and median number of steps taken each day](figure/histogram number of steps - mean and median number of steps taken each day-1.png)
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png)
 
 ```r
 ggplot(activity_raw, aes(x=date,y=steps))+
@@ -107,7 +110,7 @@ ggplot(activity_raw, aes(x=date,y=steps))+
 ## Warning: Removed 2304 rows containing non-finite values (stat_summary).
 ```
 
-![plot of chunk histogram number of steps - mean and median number of steps taken each day](figure/histogram number of steps - mean and median number of steps taken each day-2.png)
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-2.png)
 
 ```r
 activity_raw %>% group_by(date) %>% summarise(step_mean=mean(steps,na.rm = TRUE),step_median=median(steps,na.rm=TRUE))
@@ -162,7 +165,7 @@ ggplot(avg_daily_act_pattern,aes(interval,step_mean))+
   theme_bw()
 ```
 
-![plot of chunk average number of steps time series](figure/average number of steps time series-1.png)
+![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png)
 
 
 ## Imputing missing values
@@ -196,7 +199,7 @@ ggplot(activity_na_removed, aes(x=date,y=steps))+geom_col(fill="blue")+
   theme_bw()
 ```
 
-![plot of chunk imputing missing values](figure/imputing missing values-1.png)
+![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5-1.png)
 
 ```r
 ggplot(activity_na_removed, aes(x=date,y=steps))+
@@ -212,7 +215,7 @@ ggplot(activity_na_removed, aes(x=date,y=steps))+
   theme_bw()
 ```
 
-![plot of chunk imputing missing values](figure/imputing missing values-2.png)
+![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5-2.png)
 
 
 
@@ -245,5 +248,5 @@ ggplot(avg_daily_act_pattern_by_weekday,aes(interval,step_mean))+
   theme_bw()
 ```
 
-![plot of chunk panel plot comparing weekdays and weekends](figure/panel plot comparing weekdays and weekends-1.png)
+![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6-1.png)
 
